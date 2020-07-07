@@ -10,5 +10,4 @@ class Model < ApplicationRecord
   validates :shoe, presense: true
   validates :eyes, presense: true
   validates :hair, presense: true
-  validates :birthdate, presense: true
 end

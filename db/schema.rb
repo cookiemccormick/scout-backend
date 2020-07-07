@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 2020_07_07_024643) do
     t.float "shoe", null: false
     t.string "eyes", null: false
     t.string "hair", null: false
-    t.datetime "birthdate", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

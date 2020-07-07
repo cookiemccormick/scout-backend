@@ -10,7 +10,6 @@ class CreateModels < ActiveRecord::Migration[5.2]
       t.float :shoe, null: false
       t.string :eyes, null: false
       t.string :hair, null: false
-      t.datetime :birthdate, null: false
       t.timestamps null: false
     end
   end
