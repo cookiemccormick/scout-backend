@@ -7,7 +7,7 @@ class CreateBookings < ActiveRecord::Migration[5.2]
       t.datetime :date, null: false
       t.time :time, null: false
       t.string :description, null: false
-      t.timestamps, null: false
+      t.timestamps null: false
     end
   end
 end
