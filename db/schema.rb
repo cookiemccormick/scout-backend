@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 2020_07_07_024643) do
     t.integer "model_id", null: false
     t.string "job", null: false
     t.float "amount", null: false
-    t.datetime "date", null: false
-    t.time "time", null: false
+    t.datetime "start_time", null: false
+    t.time "end_time", null: false
     t.string "description", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
