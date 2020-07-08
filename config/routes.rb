@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-
   namespace :api do
     namespace :v1 do
-      resources :bookings
-      resources :models
+      resources :models do
+        resources :bookings
+      end
     end
   end
 end
