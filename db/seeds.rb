@@ -1,7 +1,30 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Model.delete_all
+Booking.delete_all
+
+model = Model.create!(
+          name: 'Ashley Novak',
+          pictures: '/images/ashleynovak.jpg',
+          height: 68,
+          bust: 34,
+          waist: 24,
+          hip: 35,
+          shoe: 8,
+          eyes: 'hazel',
+          hair: 'blond'
+)
+
+model.bookings.create!(
+            job: 'Benefit Cosmetics',
+            amount: 1100,
+            start_time: DateTime.parse('2020-09-24T11:00:00Z'),
+            end_time: DateTime.parse('2020-09-24T16:00:00Z'),
+            description: 'Model will be demoing eyebrow products.'
+)
+
+model.bookings.create!(
+            job: 'Steam Mop',
+            amount: 1500,
+            start_time: DateTime.parse('2020-07-09T09:00:00Z'),
+            end_time: DateTime.parse('2020-07-09T11:00:00Z'),
+            description: 'Model will clean up mess on floor with steam mop.'
+)
