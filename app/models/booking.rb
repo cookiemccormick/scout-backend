@@ -1,10 +1,10 @@
 class Booking < ApplicationRecord
   belongs_to :model
 
-  validates :model_id, presense: true
-  validates :job, presense: true
-  validates :amount, presense: true
-  validates :start_time, presense: true
-  validates :end_time, presense: true
-  validates :description, presense: true
+  validates :model_id, presence: true
+  validates :job, presence: true
+  validates :amount, presence: true
+  validates :start_time, presence: true
+  validates :end_time, presence: true
+  validates :description, presence: true
 end
