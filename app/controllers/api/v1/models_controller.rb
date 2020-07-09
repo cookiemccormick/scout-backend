@@ -9,7 +9,7 @@ class Api::V1::ModelsController < ApplicationController
   end
 
   def index
-    @models = Models.all
+    @models = Model.all
     render json: @models
   end
 
