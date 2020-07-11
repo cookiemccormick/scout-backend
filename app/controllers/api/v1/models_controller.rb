@@ -28,7 +28,7 @@ class Api::V1::ModelsController < ApplicationController
   def model_params
     params.require(:model).permit(
       :name,
-      :pictures,
+      :picture,
       :height,
       :bust,
       :waist,
