@@ -2,7 +2,7 @@ class Model < ApplicationRecord
   has_many :bookings
 
   validates :name, presence: true
-  validates :pictures, presence: true
+  validates :picture, presence: true
   validates :height, presence: true
   validates :bust, presence: true
   validates :waist, presence: true
