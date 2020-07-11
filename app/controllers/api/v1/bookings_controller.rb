@@ -11,7 +11,12 @@ class Api::V1::BookingsController < ApplicationController
   end
 
   def index
-    @bookings = @model.bookings
+    if @model
+      @bookings = @model.bookings
+    else
+      @bookings = Booking.all
+    end
+
     render json: @bookings
   end
 
