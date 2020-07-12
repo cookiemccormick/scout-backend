@@ -26,7 +26,7 @@ class Api::V1::BookingsController < ApplicationController
   end
 
   def destroy
-    @booking = Booking.find(params['id'])
+    @booking = Booking.find(params[:id])
     @model = Model.find(@booking.model_id)
     @booking.destroy
     render json: @model
