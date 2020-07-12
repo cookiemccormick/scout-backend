@@ -4,7 +4,7 @@ class Api::V1::BookingsController < ApplicationController
   def create
     @booking = @model.bookings.new(booking_params)
     if @booking.save
-      render json: @booking
+      render json: @model
     else
       render json: {error: 'Error creating booking'}
     end
@@ -26,8 +26,10 @@ class Api::V1::BookingsController < ApplicationController
   end
 
   def destroy
-    @booking = Booking.find(params[:id])
+    @booking = Booking.find(params['id'])
+    @model = Model.find(@booking.model_id)
     @booking.destroy
+    render json: @model
   end
 
   private
