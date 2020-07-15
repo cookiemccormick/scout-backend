@@ -45,6 +45,8 @@ Rails.application.configure do
   config.active_record.verbose_query_logs = true
 
 
+  config.default_url_options = { only_path: true }
+
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 

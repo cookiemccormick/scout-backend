@@ -1,15 +1,12 @@
 class Api::V1::ModelsController < ApplicationController
   def create
     @model = Model.new(model_params)
-    if @model.save
-      render json: @model
-    else
-      render json: {error: 'Error creating model'}
-    end
+    @model.save!
+    render json: @model
   end
 
   def index
-    @models = Model.all
+    @models = Model.all.with_attached_picture
     render json: @models
   end
 
@@ -37,7 +34,7 @@ class Api::V1::ModelsController < ApplicationController
   private
 
   def model_params
-    params.require(:model).permit(
+    params.permit(
       :name,
       :picture,
       :height,

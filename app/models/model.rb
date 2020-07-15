@@ -1,8 +1,8 @@
 class Model < ApplicationRecord
   has_many :bookings
+  has_one_attached :picture
 
   validates :name, presence: true
-  validates :picture, presence: true
   validates :height, presence: true
   validates :bust, presence: true
   validates :waist, presence: true

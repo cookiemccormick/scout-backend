@@ -3,7 +3,6 @@ Booking.delete_all
 
 model = Model.create!(
           name: 'Ashley Novak',
-          picture: '/images/ashleynovak.jpg',
           height: 68,
           bust: 34,
           waist: 24,
@@ -12,6 +11,10 @@ model = Model.create!(
           eyes: 'hazel',
           hair: 'blond'
 )
+
+model.picture.attach io: File.open(Rails.root.join('public', 'images', 'ashleynovak.jpg')),
+                     filename: 'image.jpg',
+                     content_type: 'image/jpg'
 
 model.bookings.create!(
             job: 'Benefit Cosmetics',
