@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 2020_07_14_012655) do
 
   create_table "models", force: :cascade do |t|
     t.string "name", null: false
-    t.float "height", null: false
+    t.string "height", null: false
     t.float "bust", null: false
     t.float "waist", null: false
     t.float "hip", null: false

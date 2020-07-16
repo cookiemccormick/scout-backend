@@ -2,7 +2,7 @@ class CreateModels < ActiveRecord::Migration[5.2]
   def change
     create_table :models do |t|
       t.string :name, null: false
-      t.float :height, null: false
+      t.string :height, null: false
       t.float :bust, null: false
       t.float :waist, null: false
       t.float :hip, null: false
