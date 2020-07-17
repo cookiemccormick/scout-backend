@@ -7,7 +7,7 @@ class Api::V1::ModelsController < ApplicationController
 
   def index
     @models = Model.all.with_attached_picture
-    render json: @models
+    render json: @models.alphabetical_name
   end
 
   def show

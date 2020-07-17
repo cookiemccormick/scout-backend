@@ -10,4 +10,6 @@ class Model < ApplicationRecord
   validates :shoe, presence: true
   validates :eyes, presence: true
   validates :hair, presence: true
+
+  scope :alphabetical_name, -> { order("name asc") }
 end

@@ -7,4 +7,6 @@ class Booking < ApplicationRecord
   validates :start_time, presence: true
   validates :end_time, presence: true
   validates :description, presence: true
+
+  scope :most_recent, -> { order("start_time desc") }
 end
