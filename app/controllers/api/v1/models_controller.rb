@@ -15,11 +15,6 @@ class Api::V1::ModelsController < ApplicationController
     render json: @model
   end
 
-  def edit
-    @model = Model.find(params[:id])
-    @model
-  end
-
   def update
     @model = Model.find(params[:id])
     @model.update(model_params)

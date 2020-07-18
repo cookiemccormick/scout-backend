@@ -25,6 +25,12 @@ class Api::V1::BookingsController < ApplicationController
     render json: @booking
   end
 
+  def update
+    @booking = Booking.find(params[:id])
+    @booking.update(booking_params)
+    render json: @booking.model
+  end
+
   def destroy
     @booking = Booking.find(params[:id])
     @model = Model.find(@booking.model_id)

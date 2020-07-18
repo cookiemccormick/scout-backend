@@ -3,7 +3,7 @@ class ModelSerializer < ActiveModel::Serializer
 
   attributes :id, :picture, :name, :height, :bust, :waist, :hip, :shoe, :eyes, :hair, :bookings
 
-  # has_many :bookings
+  has_many :bookings
 
   def picture
     return unless object.picture.attached?
