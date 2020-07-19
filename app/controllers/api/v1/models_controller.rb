@@ -4,7 +4,7 @@ class Api::V1::ModelsController < ApplicationController
     if @model.save
       render json: @model
     else
-      render json: { error: 'Error creating booking' }
+      render json: { error: 'Error creating model' }
     end
   end
 
@@ -20,8 +20,11 @@ class Api::V1::ModelsController < ApplicationController
 
   def update
     @model = Model.find(params[:id])
-    @model.update(model_params)
-    render json: @model
+    if @model.update(model_params)
+      render json: @model
+    else
+      render status: :unprocessable_entity, json: { errors: @model.errors }
+    end
   end
 
   def destroy
