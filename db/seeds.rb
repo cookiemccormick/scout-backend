@@ -3,7 +3,7 @@ Booking.delete_all
 
 model = Model.create!(
           name: 'Ashley Novak',
-          height: 68,
+          height: '5\'11"',
           bust: 34,
           waist: 24,
           hip: 35,
