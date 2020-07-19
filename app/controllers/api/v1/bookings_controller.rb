@@ -6,23 +6,8 @@ class Api::V1::BookingsController < ApplicationController
     if @booking.save
       render json: @model
     else
-      render json: {error: 'Error creating booking'}
+      render json: { error: 'Error creating booking' }
     end
-  end
-
-  def index
-    if @model
-      @bookings = @model.bookings
-    else
-      @bookings = Booking.all
-    end
-
-    render json: @bookings
-  end
-
-  def show
-    @booking = Booking.find(params[:id])
-    render json: @booking
   end
 
   def update

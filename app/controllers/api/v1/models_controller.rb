@@ -1,8 +1,11 @@
 class Api::V1::ModelsController < ApplicationController
   def create
     @model = Model.new(model_params)
-    @model.save!
-    render json: @model
+    if @model.save
+      render json: @model
+    else
+      render json: { error: 'Error creating booking' }
+    end
   end
 
   def index
